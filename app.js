@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Your frontend URL
+    origin: '${process.env.PORT}', // Your frontend URL
     credentials: true, // Important for cookies/sessions
   })
 );
